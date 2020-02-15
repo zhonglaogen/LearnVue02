@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+
+  // setTimeout(() => {
+  //     console.log('hello');
+  // },1000)
+
+
+  //参数--> 函数（resolve,reject)
+  //resolve,reject也是函数
+  //resolve执行会执行then, 成功代用resolve，失败用reject，进入catch
+ new Promise((resolve,reject) => {
+     setTimeout(() => {
+        // 第一次网络请求
+        resolve()
+     },1000)
+ }).then(() => {
+     //第一次处理
+     console.log('hello');
+     return new Promise((resolve,reject) => {
+         setTimeout(() => {
+             //第二次网络请求
+             resolve()
+         },2000)
+     })
+ }).then(() => {
+     //第二次处理
+     console.log('word');
+     return new Promise((resolve,reject) => {
+         setTimeout(() => {
+             //第三次网络请求
+             resolve()
+         },1000)
+     })
+ }).then(() => {
+     //第三次处理
+     console.log('www');
+ })
+
+//  异步操作用到promise
+//  new -> 构造函数（保存状态信息，执行传入的函数）
+
+  new Promise((resolve,reject) => {
+      setTimeout(() => {
+          // resolve('hello 1111')
+          reject('hello 2222')
+      })
+  }).then((data) => {
+      console.log(data);
+  }).catch((data) => {
+      console.log(data);
+  })
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  //网络请求，自己处理，自己处理，自己处理
+  // new Promise((resolve) => {
+  //     setTimeout(() => {
+  //         resolve('aaa')
+  //     },1000)
+  // }).then(res => {
+  //     console.log(res);
+  //     return new Promise((resolve) => {
+  //         resolve(res + '111')
+  //     })
+  // }).then(res => {
+  //     console.log(res);
+  //     return new Promise(resolve => {
+  //         resolve(res + '222')
+  //     })
+  // }).then(res => {
+  //     console.log(res);
+  // })
+
+//  另外一种写法 new promise（resolve => resolve(结果)）简写
+  //网络请求，自己处理，自己处理，自己处理
+  // new Promise((resolve) => {
+  //     setTimeout(() => {
+  //         resolve('aaa')
+  //     },1000)
+  // }).then(res => {
+  //     console.log(res);
+  //     return Promise.resolve(res + '111')
+  // }).then(res => {
+  //     console.log(res);
+  //     return Promise.resolve(res + '222')
+  // }).then(res => {
+  //     console.log(res);
+  // })
+
+//  第三种写法
+//   new Promise((resolve) => {
+//       setTimeout(() => {
+//           resolve('aaa')
+//       },1000)
+//   }).then(res => {
+//       console.log(res);
+//       return res + '111'
+//   }).then(res => {
+//       console.log(res);
+//       return res + '222'
+//   }).then(res => {
+//       console.log(res);
+//   })
+
+
+//  错误处理
+  //网络请求，自己处理，自己处理，自己处理
+  new Promise((resolve) => {
+      setTimeout(() => {
+          resolve('aaa')
+      },1000)
+  }).then(res => {
+      console.log(res);
+      // return Promise.reject('xxx')
+      throw 'err meesss'
+  }).then(res => {
+      console.log(res);
+      return Promise.resolve(res + '222')
+  }).then(res => {
+      console.log(res);
+  }).catch(err => {
+      console.log(err);
+  })
+
+</script>
+</body>
+</html>

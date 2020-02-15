@@ -1,0 +1,14 @@
+npm install axios@0.18.0 --save
+httbin.org/   测试用
+http://123.207.32.32:8000/home/multidata
+http://123.207.32.32:8000/home/data?type=pop&page=1
+服务器用jsonp，解决跨域
+全局配置
+创建axios实例，避免全局
+拦截器请求成功请求失败
+响应成功响应失败
+
+作用：
+1config中的信息不符合服务器的要求
+2每次发送网络请求都希望在界面显示一个图标
+3某些网络请求必须携带一些特殊的信息（比如登录的token）

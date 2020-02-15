@@ -1,0 +1,10 @@
+安装npm install --save vue
+更改配置 alias: {
+                'vue$': 'vue/dist/vue.esm.js'
+
+            }改为complier的vue
+安装npm install --save-dev vue-loader@13.0.0 vue-template-compiler@2.5.21 负责解析vue文件，
+导入模块省略后缀extensions: ['.js','.css','.vue'],
+分离vue代码，写在main里，利用组件的形式用template代替组件
+组件写在js代码里
+组件卸载vue代码里

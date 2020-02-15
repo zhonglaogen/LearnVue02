@@ -1,0 +1,20 @@
+通过vuex来管理共同的变量
+安装 npm install --save vuex@3.0.1
+安装vue devtools 管理vuex的变化
+
+mutation和getter传参数的方式
+
+mutation响应式的前提是所有数据必须提前加载，后加入的不具有响应式
+用Vue。set方法Vue.set(对象，‘key’,'value')
+删属性 ： delete 对象.属性，数据删了，但是界面没显示删除 也不是响应式的
+Vue.delete(对象，‘key’)
+用常量文件代替方法名
+
+vue devtools只能跟踪同步方法，异步方法无法准确的跟踪
+
+子模块的使用
+对象的结构
+const {name，age，height} = student
+name。log
+
+store的目录结构的分离（通过模块化）

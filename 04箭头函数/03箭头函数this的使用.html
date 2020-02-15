@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<script>
+  // setTimeout(function () {
+  //     console.log(this)
+  // },100)
+
+  // setTimeout(function () {
+  //     console.log(this)
+  // },100)
+
+  //结论：箭头函数中this引用就是最近作用域的this
+  //箭头函数this是如何查找的
+  //向外层作用域中，一层层查找this，直到有this的定义
+
+  const obj = {
+      aaa(){
+          setTimeout(function () {
+              console.log(this)
+          },100)
+
+          setTimeout( ()  => {
+              console.log(this)
+          },100)
+      },
+      bbb(){
+          setTimeout(function () {
+              console.log(this)
+          },100)
+      }
+  }
+
+  obj.aaa()
+  // obj.bbb()
+
+</script>
+</body>
+</html>

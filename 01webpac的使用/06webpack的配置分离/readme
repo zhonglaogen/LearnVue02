@@ -1,0 +1,19 @@
+1生成打包后js文件的注释new webpack.BannerPlugin('版权为钟老根所有')---无需安装
+2将html文件打包，将打包的js文件，自动通过script标签插入body中---npm install html-webpack-plugin --save-dev
+3删除dist拼接的路径，缺少div标签，在插件配置模版
+4对js的压缩---npm install uglifyjs-webpack-plugin@1.1.1 --save-dev(自带版本报错，cli2使用这个),覆盖注释的插件
+5本地搭建服务器，每次都编译效率低，利用node的express监控某个文件夹发生改变就放到内存中，然后得到改变的效果，最后只执行一次npm run build就行
+--安装 npm install --save-dev webpack-dev-server@2.9.1对应脚手架2的webpack3.6.0，配置配置文件
+修改配置文件(.js)devServer: {
+              contentBase: './dist',
+              inline: true
+          }
+添加本地快捷启动方式(优先本地启动，json文件)"dev": "webpack-dev-server --open" --open自动打开网页
+
+复制后，删除json文件的本地服务器，重新下，
+webpack-merge": "^4.1.5"配置文件
+
+安装脚手架， npm install @vue/cli -g 初始化项目： vue create 项目名  3.2.1
+安装第二版本的脚手架 npm install @vue/cli-init -g 初始化项目： vue init webpack 项目名 3.2
+
+node可以直接运行js文件

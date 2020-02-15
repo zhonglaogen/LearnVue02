@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<script>
+  //then可以传入两个函数，第一个成功，第二个失败函数
+  new Promise((resolve,reject) => {
+      setTimeout(() => {
+          resolve('hello 111')
+          reject('hello 222')
+      },1000)
+  }).then(data => {console.log(data)},err => {console.log(err)})
+</script>
+</body>
+</html>

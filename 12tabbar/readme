@@ -1,0 +1,12 @@
+用到了组件之间的通信
+文件起别名解决路径复杂问题配置文件base
+resolve: {
+    extensions: ['.js', '.vue', '.json'],
+    alias: {
+      '@': resolve('src'),
+      'assets': resolve('src/assets')
+    }
+  },
+
+  这样import写别名就可以找到
+  普通的前面加上～
