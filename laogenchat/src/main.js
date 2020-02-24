@@ -2,6 +2,11 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from "./store";
+import webchat from './common/webchat'
+
+
+Window.chat = webchat
+
 
 Vue.config.productionTip = false
 
@@ -12,5 +17,8 @@ new Vue({
   store,
   render: h => h(App)
 })
+
+
+
 
 
