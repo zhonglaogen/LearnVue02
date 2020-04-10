@@ -1,6 +1,7 @@
 <template>
   <tab-bar>
     <!--      -->
+<!--    这里没加:是因为不是动态绑定只是传输了个字符串-->
     <tab-bar-item path="/home" active-color="blue">
       <img slot="item-icon" src="~assets/img/tabbar/home.svg" alt="">
       <img slot="item-icon-active" src="~assets/img/tabbar/home_active.svg" alt="">

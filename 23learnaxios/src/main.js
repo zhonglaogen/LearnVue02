@@ -64,8 +64,10 @@ request({
   url: '/home/multidata'
 }).then(res => {
   console.log(res);
+  console.log(1)
 }).then(res => {
   console.log(res);
+  console.log(2)
 })
 
 

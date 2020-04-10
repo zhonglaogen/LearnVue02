@@ -10,3 +10,4 @@ import {name, age, height} from "./info";
 console.log(name);
 
 // webpack ./src/main.js ./dist/bundle.js
+// npm install webpack@3.6.0 -g

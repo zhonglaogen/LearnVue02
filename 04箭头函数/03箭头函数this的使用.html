@@ -22,10 +22,12 @@
   const obj = {
       aaa(){
           setTimeout(function () {
+              //window
               console.log(this)
           },100)
 
           setTimeout( ()  => {
+              //obj
               console.log(this)
           },100)
       },
@@ -33,11 +35,19 @@
           setTimeout(function () {
               console.log(this)
           },100)
+      },
+      ccc() {
+          //obj
+          console.log(this)
       }
   }
 
-  obj.aaa()
-  // obj.bbb()
+
+  // obj.aaa()
+
+  obj.ccc()
+  //window
+  console.log(this)
 
 </script>
 </body>

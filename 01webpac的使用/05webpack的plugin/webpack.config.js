@@ -24,7 +24,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname,'dist'),
         filename: 'bundle.js',
-        //只要是url都会拼接这个
+        //只要是url都会拼接这个,为了寻找图片的地址
         // publicPath: 'dist/'
     },
     module: {

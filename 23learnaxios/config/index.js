@@ -3,6 +3,8 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 
 const path = require('path')
+//开发环境设置允许跨域
+// var proxyConfig = require('./proxyConfig')
 
 module.exports = {
   dev: {
@@ -20,7 +22,7 @@ module.exports = {
     notifyOnErrors: true,
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
 
-    
+
     /**
      * Source Maps
      */
